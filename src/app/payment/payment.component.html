@@ -1,0 +1,14 @@
+<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    </head>
+<div>
+<h3>Amount to Pay is {{totalAmount}}</h3>
+<form >
+    <div class="form-group">
+      <label for="amountPaid">Enter the amount to pay:</label>
+      <input type="number" class="form-control" id="amountPaid" name="amountPaid" [(ngModel)]="amountPaid">
+    </div>
+    
+    <button type="submit" class="btn btn-success" (click)="validate()">Submit</button>
+  </form>
+</div>
