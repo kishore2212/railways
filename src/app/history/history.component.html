@@ -1,59 +1,56 @@
-<head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-</head>
 <div id="heading">
-<h3>Booking History</h3>
-</div> 
+    <h3>Booking History</h3>
+</div>
 <br>
 
 <div *ngFor="let history of bookingHistory" class="tile">
-   
+
     <h4>Train Details:</h4>
     <table class="table table-striped">
-            <thead>
-                    <tr class="success">
-                        <th>Train No</th>
-                        <th>Source</th>
-                        <th>Destination</th>
-                        <th>Name</th>
-                        <th>Departure Time</th>
-                        <th>Arrival Time</th>
-                        <th>Seat Type</th>
-                        <th>Date</th>
-                        <th>Amount</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{history.trainDetail.no}}</td>
-                        <td>{{history.trainDetail.source}}</td>
-                        <td>{{history.trainDetail.destination}}</td>
-                        <td>{{history.trainDetail.name}}</td>
-                        <td>{{history.trainDetail.start}}</td>
-                        <td>{{history.trainDetail.end}}</td>
-                        <td>{{history.type}}</td>
-                        <td>{{history.dateOfJourney}}</td>
-                        <td>{{history.amount}}</td>
-                    </tr>
-                </tbody>
+        <thead>
+            <tr class="success">
+                <th>Train No</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Name</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Seat Type</th>
+                <th>Date</th>
+                <th>Amount</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{history.trainDetail.no}}</td>
+                <td>{{history.trainDetail.source}}</td>
+                <td>{{history.trainDetail.destination}}</td>
+                <td>{{history.trainDetail.name}}</td>
+                <td>{{history.trainDetail.start}}</td>
+                <td>{{history.trainDetail.end}}</td>
+                <td>{{history.type}}</td>
+                <td>{{history.dateOfJourney}}</td>
+                <td>{{history.amount}}</td>
+            </tr>
+        </tbody>
     </table>
 
     <h4>Passenger Details:</h4>
     <table class="table table-striped">
-            <thead>
-                <tr class="success">
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let person of history.passenger">
-                    <td>{{person.name}}</td>
-                    <td>{{person.age}}</td>
-                    <td>{{person.gender}}</td>
-                </tr>
-                </tbody>
-        </table>
+        <thead>
+            <tr class="success">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of history.passenger">
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
