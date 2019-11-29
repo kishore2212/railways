@@ -1,0 +1,89 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<table>
+<div *ngFor="let details of trainDetails">
+    <div *ngIf="details.no==selectedTrain" >
+        <tr>
+            <td>Train No:</td>
+            <td>{{details.no}}</td>
+        </tr>
+        <input type="hidden" name="no" [(ngModel)]="no" value="{{details.no}}">
+        <input type="hidden" name="source" [(ngModel)]="source" value={{details.source}}>
+        <input type="hidden" name="destination" [(ngModel)]="destination" value={{details.destination}}>
+        <input type="hidden" name="start" [(ngModel)]="start" value={{details.start}}>
+        <input type="hidden" name="end" [(ngModel)]="end" value={{details.end}}>
+        
+        <tr>
+            <td>Source:</td>
+            <td>{{details.source}}</td>
+        </tr>
+        <tr>
+            <td>Destination:</td>
+            <td>{{details.destination}}</td>
+        </tr>
+        <tr>
+                <td>Date of Journey:</td>
+                <td>{{dateOfJourney}}</td>
+            </tr>
+        <tr>
+            <td>Arrival Time:</td>
+            <td>{{details.start}}</td>
+        </tr>
+        <tr>
+            <td>Departure Time:</td>
+            <td>{{details.end}}</td>
+        </tr>
+    </div>
+</div>
+</table>
+<form class="form">
+    <div class="form-group">
+        <label for="type">Select Type:</label>
+        <select id="type" class="form-control" name="type" [(ngModel)]="type">
+            <option *ngFor="let type of types" [value]="type">
+                {{type}}
+            </option>
+        </select>
+    </div>
+    <table>
+    <tr>
+
+
+            <td><label for="name">Passenger Name:</label></td>
+            <td><input type="text" id="name" [(ngModel)]="name" name="name" ></td>
+
+
+            <td> <label for="age">Age:</label></td>
+            <td> <input type="text" id="age" [(ngModel)]="age" name="age"></td>
+
+
+            <td> <input type="radio" name="gender" value="male" [(ngModel)]="gender"> Male</td>
+            <td> <input type="radio" name="gender" value="female" [(ngModel)]="gender"> Female</td>
+        <td><button  class="btn btn-primary" (click)="addArr(name,age,gender)">Add Passenger</button> </td>
+ </tr></table>
+
+ <br>
+ <br>
+ <table class="table table-striped">
+     <thead>
+         <tr class="success">
+             <th>Name</th>
+             <th>Age</th>
+             <th>Gender</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr *ngFor="let person of passenger">
+             <td>{{person.name}}</td>
+             <td>{{person.age}}</td>
+             <td>{{person.gender}}</td>
+         </tr>
+         </tbody>
+ </table>
+
+<br>
+<br>
+    
+    <button type="submit" class="btn btn-primary" (click)="formAction()">Submit</button>
+</form>

@@ -1,0 +1,10 @@
+.tile{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    border: 1px solid;
+    padding: 12px;
+}
+#heading{
+    text-align: center;
+}
