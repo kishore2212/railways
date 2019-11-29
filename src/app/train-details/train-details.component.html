@@ -1,0 +1,35 @@
+<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<table class="table table-striped">
+    <thead>
+        <tr class="success">
+            <th>Train No</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>SL</th>
+            <th>3A</th>
+            <th>2A</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            <ng-container *ngFor="let details of trainDetails">
+                    <tr *ngIf="details.source==routeInfo.source && details.destination==routeInfo.destination">
+                        <td>{{details.no}}</td>
+                        <td>{{details.source}}</td>
+                        <td>{{details.destination}}</td>
+                        <td>{{details.start}}</td>
+                        <td>{{details.end}}</td>
+                        <td>{{details.sl}}</td>
+                        <td>{{details.threeA}}</td>
+                        <td>{{details.twoA}}</td>
+                        
+                        <td><button  class="btn btn-success" (click)="buttonAction(details.no)">Book</button></td>
+                    </tr>
+            </ng-container>
+        
+    </tbody>
+</table>
