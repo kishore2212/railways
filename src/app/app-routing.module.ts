@@ -4,7 +4,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { PnrComponent } from './pnr/pnr.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
-import { Profile } from 'selenium-webdriver/firefox';
 
 
 const routes: Routes = [
