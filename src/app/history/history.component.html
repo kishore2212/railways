@@ -3,37 +3,41 @@
 </div>
 <br>
 
-<div *ngFor="let history of bookingHistory" class="tile">
-
+<div *ngFor="let history of bookingHistory;let i=index" class="tile">
+   
     <h4>Train Details:</h4>
     <table class="table table-striped">
-        <thead>
-            <tr class="success">
-                <th>Train No</th>
-                <th>Source</th>
-                <th>Destination</th>
-                <th>Name</th>
-                <th>Departure Time</th>
-                <th>Arrival Time</th>
-                <th>Seat Type</th>
-                <th>Date</th>
-                <th>Amount</th>
+            <thead>
+                    <tr class="success">
+                        <th>Train No</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Name</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>Seat Type</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>PNR</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{history.trainDetail.no}}</td>
+                        <td>{{history.trainDetail.source}}</td>
+                        <td>{{history.trainDetail.destination}}</td>
+                        <td>{{history.trainDetail.name}}</td>
+                        <td>{{history.trainDetail.start}}</td>
+                        <td>{{history.trainDetail.end}}</td>
+                        <td>{{history.type}}</td>
+                        <td>{{history.dateOfJourney}}</td>
+                        <td>{{history.amount}}</td>
+                        <td>{{history.pnr}}</td>
+                        <td><button  class="btn btn-danger" (click)="buttonAction(history,i)">Cancel</button></td>
+                    </tr>
+                </tbody>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{history.trainDetail.no}}</td>
-                <td>{{history.trainDetail.source}}</td>
-                <td>{{history.trainDetail.destination}}</td>
-                <td>{{history.trainDetail.name}}</td>
-                <td>{{history.trainDetail.start}}</td>
-                <td>{{history.trainDetail.end}}</td>
-                <td>{{history.type}}</td>
-                <td>{{history.dateOfJourney}}</td>
-                <td>{{history.amount}}</td>
-            </tr>
-        </tbody>
     </table>
 
     <h4>Passenger Details:</h4>

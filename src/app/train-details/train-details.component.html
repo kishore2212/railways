@@ -1,9 +1,17 @@
+
+
+<div id="heading">
+        <h3>Booking History</h3>
+        </div> 
+        <br>
+
 <table class="table table-striped">
     <thead>
         <tr class="success">
             <th>Train No</th>
             <th>Source</th>
             <th>Destination</th>
+            <th>Name</th>
             <th>Departure Time</th>
             <th>Arrival Time</th>
             <th>SL</th>
@@ -13,20 +21,21 @@
         </tr>
     </thead>
     <tbody>
-        <ng-container *ngFor="let details of trainDetails">
-            <tr *ngIf="details.source==routeInfo.source && details.destination==routeInfo.destination">
-                <td>{{details.no}}</td>
-                <td>{{details.source}}</td>
-                <td>{{details.destination}}</td>
-                <td>{{details.start}}</td>
-                <td>{{details.end}}</td>
-                <td>{{details.sl}}</td>
-                <td>{{details.threeA}}</td>
-                <td>{{details.twoA}}</td>
-
-                <td><button class="btn btn-success" (click)="buttonAction(details.no)">Book</button></td>
-            </tr>
-        </ng-container>
-
+            <ng-container *ngFor="let details of trainDetails">
+                    <tr *ngIf="details.source==routeInfo.source && details.destination==routeInfo.destination">
+                        <td>{{details.no}}</td>
+                        <td>{{details.source}}</td>
+                        <td>{{details.destination}}</td>
+                        <td>{{details.name}}</td>
+                        <td>{{details.start}}</td>
+                        <td>{{details.end}}</td>
+                        <td>{{details.sl}}</td>
+                        <td>{{details.threeA}}</td>
+                        <td>{{details.twoA}}</td>
+                        
+                        <td><button  class="btn btn-success" (click)="buttonAction(details.no)">Book</button></td>
+                    </tr>
+            </ng-container>
+        
     </tbody>
 </table>

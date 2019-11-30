@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PnrComponent } from './pnr/pnr.component';
+import { CancelComponent } from './cancel/cancel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PnrComponent } from './pnr/pnr.component';
     LoginComponent,
     RegistrationComponent,
     ProfileComponent,
-    PnrComponent
+    PnrComponent,
+    CancelComponent
   ],
   imports: [
     BrowserModule,
