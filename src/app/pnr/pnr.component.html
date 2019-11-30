@@ -1,6 +1,62 @@
 <div class="container">
     <div class="input-group mb-3">
         <input type="text" class="form-control col-8 pnr" placeholder="PNR Number" [(ngModel)]="pnr">
-        <button class="btn btn-primary" type="submit">search</button>
+       
     </div>
+</div>
+
+<div *ngFor="let history of bookingHistory;let i=index" >
+   <div *ngIf="pnr==history.pnr">
+    <h4>Train Details:</h4>
+    <table class="table table-striped" >
+            <thead>
+                    <tr class="success">
+                        <th>Train No</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Name</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>Seat Type</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>PNR</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{history.trainDetail.no}}</td>
+                        <td>{{history.trainDetail.source}}</td>
+                        <td>{{history.trainDetail.destination}}</td>
+                        <td>{{history.trainDetail.name}}</td>
+                        <td>{{history.trainDetail.start}}</td>
+                        <td>{{history.trainDetail.end}}</td>
+                        <td>{{history.type}}</td>
+                        <td>{{history.dateOfJourney}}</td>
+                        <td>{{history.amount}}</td>
+                        <td>{{history.pnr}}</td>
+                        <td><button  class="btn btn-danger" (click)="buttonAction(history,i)">Cancel</button></td>
+                    </tr>
+                </tbody>
+    </table>
+
+    <h4>Passenger Details:</h4>
+    <table class="table table-striped">
+            <thead>
+                <tr class="success">
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let person of history.passenger">
+                    <td>{{person.name}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.gender}}</td>
+                </tr>
+                </tbody>
+        </table>
+        </div>
 </div>

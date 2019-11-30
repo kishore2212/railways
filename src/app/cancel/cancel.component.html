@@ -1,0 +1,59 @@
+
+
+
+<div id="heading">
+    <h3>This train travel is cancelled</h3>
+</div>
+<br>
+<div class="tile">
+
+    <h4>Train Details:</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr class="danger">
+                <th>Train No</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Name</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Seat Type</th>
+                <th>Date</th>
+                <th>Amount</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{cancelDetails.trainDetail.no}}</td>
+                <td>{{cancelDetails.trainDetail.source}}</td>
+                <td>{{cancelDetails.trainDetail.destination}}</td>
+                <td>{{cancelDetails.trainDetail.name}}</td>
+                <td>{{cancelDetails.trainDetail.start}}</td>
+                <td>{{cancelDetails.trainDetail.end}}</td>
+                <td>{{cancelDetails.type}}</td>
+                <td>{{cancelDetails.dateOfJourney}}</td>
+                <td>{{cancelDetails.amount}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Passenger Details:</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr class="danger">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of cancelDetails.passenger">
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

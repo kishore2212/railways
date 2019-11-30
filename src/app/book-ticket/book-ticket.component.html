@@ -1,6 +1,4 @@
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-</head>
+
 
 <div class="container">
     <h2>Choose your source and destination</h2>
@@ -8,7 +6,7 @@
     <form (submit)="formAction()">
       <div class="form-group" >
         <label for="source">Source:</label>
-        <select id="source" class="form-control" name="source"  [(ngModel)]="routeInfo.source">
+        <select id="source" class="form-control " name="source" required [(ngModel)]="routeInfo.source"  >
             <option *ngFor="let source of sources" [value]="source">
               {{source}}
             </option>
@@ -16,7 +14,7 @@
       </div>
       <div class="form-group">
         <label for="destination">Destination:</label>
-        <select id="destination" class="form-control" name="destination" [(ngModel)]="routeInfo.destination">
+        <select id="destination" class="form-control" name="destination" [(ngModel)]="routeInfo.destination" required="true">
                 <ng-container *ngFor="let destination of destinations">
                         <option *ngIf="destination!=routeInfo.source"  [value]="destination" >{{destination}}</option>
                 </ng-container>
@@ -24,8 +22,8 @@
         </select>
       </div>
       <div class="form-group">
-            <label for="date">Enter the amount to pay:</label>
-            <input type="date" class="form-control" id="date" name="date" [(ngModel)]="dateOfJourney">
+            <label for="date">Date of Journey:</label>
+            <input type="date" class="form-control" id="date" name="date" [(ngModel)]="dateOfJourney" required>
           </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

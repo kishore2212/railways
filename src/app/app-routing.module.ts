@@ -9,17 +9,19 @@ import { ProfileComponent } from './profile/profile.component';
 import { PnrComponent } from './pnr/pnr.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { CancelComponent } from './cancel/cancel.component';
 
 const routes: Routes = [
   { path: 'trainDetails', component: TrainDetailsComponent},
   { path: 'bookTicket', component: BookTicketComponent},
   { path: 'passenger', component: PassengerComponent},
   { path: 'payment', component: PaymentComponent},
-  { path: 'history', component: HistoryComponent}
+  { path: 'history', component: HistoryComponent},
   { path: 'profile', component: ProfileComponent },
   { path: 'pnr', component: PnrComponent },
   { path: 'registration', component: RegistrationComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  {path:'cancel',component:CancelComponent}
 ];
 
 @NgModule({

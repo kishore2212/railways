@@ -15,7 +15,7 @@ export class PaymentComponent implements OnInit {
   amountPaid: number;
   bookingHistory1 = [];
   trainDetail = JSON.parse(localStorage.getItem("trainDetail"));
-
+  pnr=Math.floor(Math.random()*10000000);
   date;
   validate() {
     console.log(this.amountPaid)
@@ -34,7 +34,8 @@ export class PaymentComponent implements OnInit {
           dateOfJourney: this.date,
           passenger: this.passenger,
           amount: this.totalAmount,
-          type: this.type
+          type: this.type,
+          pnr:this.pnr
         }];
         localStorage.setItem("bookingHistory1", JSON.stringify(this.bookingHistory1));
       }
@@ -44,7 +45,8 @@ export class PaymentComponent implements OnInit {
           dateOfJourney: this.date,
           passenger: this.passenger,
           amount: this.totalAmount,
-          type: this.type
+          type: this.type,
+          pnr:this.pnr
         });
         localStorage.setItem("bookingHistory1", JSON.stringify(this.bookingHistory1));
       }
