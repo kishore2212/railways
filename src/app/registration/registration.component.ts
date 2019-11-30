@@ -38,5 +38,16 @@ this.router.navigate(['/login']);
 
   ngOnInit() {
   }
+  name;
+  username;
+  dob;
+  password;
+  address;
+  email;
+  phone;
+
+  register(event) {
+    console.log(this.phone);
+  }
 
 }

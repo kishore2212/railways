@@ -1,7 +1,6 @@
-
 <div id="heading">
-<h3>Booking History</h3>
-</div> 
+    <h3>Booking History</h3>
+</div>
 <br>
 
 <div *ngFor="let history of bookingHistory;let i=index" class="tile">
@@ -38,23 +37,24 @@
                         <td><button  class="btn btn-danger" (click)="buttonAction(history,i)">Cancel</button></td>
                     </tr>
                 </tbody>
+
     </table>
 
     <h4>Passenger Details:</h4>
     <table class="table table-striped">
-            <thead>
-                <tr class="success">
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let person of history.passenger">
-                    <td>{{person.name}}</td>
-                    <td>{{person.age}}</td>
-                    <td>{{person.gender}}</td>
-                </tr>
-                </tbody>
-        </table>
+        <thead>
+            <tr class="success">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of history.passenger">
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
