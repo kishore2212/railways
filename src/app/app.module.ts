@@ -8,6 +8,10 @@ import { TrainDetailsComponent } from './train-details/train-details.component';
 import { PassengerComponent } from './passenger/passenger.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HistoryComponent } from './history/history.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PnrComponent } from './pnr/pnr.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { HistoryComponent } from './history/history.component';
     PassengerComponent,
     PaymentComponent,
     HistoryComponent
+    LoginComponent,
+    RegistrationComponent,
+    ProfileComponent,
+    PnrComponent
   ],
   imports: [
     BrowserModule,

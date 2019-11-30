@@ -5,7 +5,10 @@ import { BookTicketComponent } from './book-ticket/book-ticket.component';
 import { PassengerComponent } from './passenger/passenger.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HistoryComponent } from './history/history.component';
-
+import { ProfileComponent } from './profile/profile.component';
+import { PnrComponent } from './pnr/pnr.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'trainDetails', component: TrainDetailsComponent},
@@ -13,7 +16,10 @@ const routes: Routes = [
   { path: 'passenger', component: PassengerComponent},
   { path: 'payment', component: PaymentComponent},
   { path: 'history', component: HistoryComponent}
-  
+  { path: 'profile', component: ProfileComponent },
+  { path: 'pnr', component: PnrComponent },
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
@@ -21,3 +27,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export const routingComponent = [ProfileComponent, PnrComponent, RegistrationComponent, LoginComponent];
