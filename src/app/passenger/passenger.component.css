@@ -3,6 +3,6 @@ td{
     padding: 5px;
 
 }
-.form-control{
-    width: 10%;
+.form-inline .form-control {
+    width: 180px;
 }

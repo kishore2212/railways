@@ -37,25 +37,29 @@
     </div>
 </div>
 </table>
-<form class="form">
+<br>
+
+<form class="form-inline">
     <div class="form-group">
-        <label for="type">Select Type:</label>
-        <select id="type" class="form-control" name="type" [(ngModel)]="type">
+      <tr><td>  <label for="type">Select Type:</label></td>
+      <td width="200%"><select id="type" class="form-control" name="type" [(ngModel)]="type">
             <option *ngFor="let type of types" [value]="type">
                 {{type}}
             </option>
-        </select>
+        </select></td>
     </div>
+    <br>
+    <br>
     <table>
     <tr>
 
 
             <td><label for="name">Passenger Name:</label></td>
-            <td><input type="text" id="name" [(ngModel)]="name" name="name" ></td>
+            <td><input type="text" id="name" [(ngModel)]="name" name="name" class="form-control"></td>
 
 
             <td> <label for="age">Age:</label></td>
-            <td> <input type="text" id="age" [(ngModel)]="age" name="age"></td>
+            <td> <input type="text" id="age" [(ngModel)]="age" name="age" class="form-control"></td>
 
 
             <td> <input type="radio" name="gender" value="male" [(ngModel)]="gender"> Male</td>
